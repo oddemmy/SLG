@@ -192,25 +192,33 @@
                 <p class="text-gray-400">The machinery behind the magic.</p>
             </div>
 
-            <div class="grid sm:grid-cols-3 gap-8 text-center reveal">
-                <div class="glass p-8 rounded-2xl hover:bg-white/5 transition-all group">
-                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform text-slg-gold"><i
-                            class="fa-solid fa-gift"></i></div>
-                    <h3 class="text-2xl font-bold text-slg-gold mb-2">100 Billion</h3>
-                    <p class="text-gray-400">Total Supply</p>
-                </div>
-                <div class="glass p-8 rounded-2xl hover:bg-white/5 transition-all group">
-                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform text-slg-red"><i
-                            class="fa-solid fa-fire"></i></div>
-                    <h3 class="text-2xl font-bold text-slg-red mb-2">Burned</h3>
-                    <p class="text-gray-400">50% Vitalik Buterin's Stocking</p>
-                </div>
-                <div class="glass p-8 rounded-2xl hover:bg-white/5 transition-all group">
-                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform text-slg-green"><i
-                            class="fa-solid fa-handshake"></i></div>
-                    <h3 class="text-2xl font-bold text-slg-green mb-2">0% Tax</h3>
-                    <p class="text-gray-400">Buy & Sell Freely</p>
-                </div>
+           
+             <!-- Pie Chart -->
+                    <div class="flex justify-center">
+                        <div class="relative w-80 h-80">
+                            <svg viewBox="0 0 100 100" class="transform -rotate-90">
+                                <!-- Public Sale 50% -->
+                                <circle cx="50" cy="50" r="40" fill="none" stroke="#3b82f6" stroke-width="20" 
+                                        stroke-dasharray="126 252" stroke-dashoffset="0"></circle>
+                                <!-- Reserve & Aid Fund 30% -->
+                                <circle cx="50" cy="50" r="40" fill="none" stroke="#10b981" stroke-width="20" 
+                                        stroke-dasharray="75.4 252" stroke-dashoffset="-126"></circle>
+                                <!-- Team & Dev 10% -->
+                                <circle cx="50" cy="50" r="40" fill="none" stroke="#f59e0b" stroke-width="20" 
+                                        stroke-dasharray="25.1 252" stroke-dashoffset="-201.4"></circle>
+                                <!-- Community Incentives 10% -->
+                                <circle cx="50" cy="50" r="40" fill="none" stroke="#ef4444" stroke-width="20" 
+                                        stroke-dasharray="25.1 252" stroke-dashoffset="-226.5"></circle>
+                            </svg>
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="text-4xl font-bold text-red-500">$SLG</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+               <div class="mt-12 text-center">
+                <p class="text-xl text-gray-300 font-semibold">Pure and simple - no tricks, just Christmas magic! 🎄</p>
             </div>
         </div>
     </section>
@@ -338,3 +346,4 @@
 
 
 </html>
+
