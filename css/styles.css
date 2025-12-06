@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+:root {
+    --christmas-red: #D42426;
+    --christmas-green: #146B3A;
+    --neon-green: #39FF14;
+    --gold: #FFD700;
+    --dark-blue: #0B0F2A;
+    --glass-bg: rgba(255, 255, 255, 0.05);
+    --glass-border: rgba(255, 255, 255, 0.1);
+}
+
+body {
+    background-color: var(--dark-blue);
+    font-family: 'Anton', sans-serif;
+    overflow-x: hidden;
+    color: white;
+    font-size: 18px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Anton', sans-serif;
+}
+
+/* Realistic Snowfall Animation (JS Driven) */
+.snowflake {
+    color: #fff;
+    font-family: Arial;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: -20vh;
+    z-index: 9999;
+    user-select: none;
+    cursor: default;
+    pointer-events: none;
+    will-change: transform, top;
+
+    /* Animation */
+    animation-name: snowflakes-fall;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+/* Keyframes */
+@keyframes snowflakes-fall {
+    0% {
+        top: -20vh;
+        transform: translateX(0) rotate(0deg);
+    }
+
+    100% {
+        top: 120vh;
+        transform: translateX(20px) rotate(360deg);
+    }
+}
+
+/* Utilities */
+.glass {
+    background: var(--glass-bg);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--glass-border);
+}
+
+.text-gradient {
+    background: linear-gradient(to right, #FFF, var(--gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-glow {
+    text-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
+}
+
+/* Custom Animations */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.animate-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+.bg-hero {
+    background: radial-gradient(circle at center, #1a2c4e 0%, #0B0F2A 70%);
+}

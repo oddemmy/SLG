@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa's Last Gift ($SLG) - The Final Treasure</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slg: {
+                            red: '#D42426',
+                            green: '#146B3A',
+                            gold: '#FFD700',
+                            dark: '#0B0F2A'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Anton', 'sans-serif'],
+                        serif: ['Anton', 'sans-serif'],
+                    },
+                    fontSize: {
+                        'lg': ['1.125rem', '1.75rem'], /* 18px */
+                        'xl': ['1.25rem', '1.75rem'], /* 20px */
+                        '2xl': ['1.5rem', '2rem'],    /* 24px */
+                        '3xl': ['1.875rem', '2.25rem'], /* 30px */
+                        '4xl': ['2.25rem', '2.5rem'],   /* 36px */
+                        '5xl': ['3rem', '1'],           /* 48px */
+                        '6xl': ['3.75rem', '1'],        /* 60px */
+                        '7xl': ['4.5rem', '1'],         /* 72px */
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-slg-dark text-white relative">
+
+    <!-- Snowfall -->
+    <!-- Snowfall -->
+    <div id="snowfall-container" class="fixed inset-0 pointer-events-none z-50 overflow-hidden" aria-hidden="true">
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300 glass">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <span class="text-3xl font-serif text-slg-gold font-bold tracking-wider">$SLG</span>
+                </div>
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home"
+                            class="hover:text-slg-red transition-colors px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                        <a href="#about"
+                            class="hover:text-slg-red transition-colors px-3 py-2 rounded-md text-sm font-medium">About</a>
+                        <a href="#tokenomics"
+                            class="hover:text-slg-red transition-colors px-3 py-2 rounded-md text-sm font-medium">Tokenomics</a>
+                        <a href="#roadmap"
+                            class="hover:text-slg-red transition-colors px-3 py-2 rounded-md text-sm font-medium">Roadmap</a>
+                        <a href="#community"
+                            class="bg-slg-red hover:bg-red-700 text-white px-5 py-2 rounded-full transition-all shadow-[0_0_15px_rgba(212,36,38,0.5)]">Join
+                            Community</a>
+                    </div>
+                </div>
+                <div class="-mr-2 flex md:hidden">
+                    <button id="menu-btn" type="button"
+                        class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none">
+                        <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden glass border-t border-gray-700" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3 text-center">
+                <a href="#home" class="block hover:text-slg-gold px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#about" class="block hover:text-slg-gold px-3 py-2 rounded-md text-base font-medium">About</a>
+                <a href="#tokenomics"
+                    class="block hover:text-slg-gold px-3 py-2 rounded-md text-base font-medium">Tokenomics</a>
+                <a href="#roadmap"
+                    class="block hover:text-slg-gold px-3 py-2 rounded-md text-base font-medium">Roadmap</a>
+                <a href="#community" class="block text-slg-red font-bold px-3 py-2 rounded-md text-base">Join
+                    Community</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen relative flex items-center justify-center pt-20 overflow-hidden bg-hero">
+        <div class="absolute inset-0 z-0">
+            <!-- Background Glows -->
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-slg-red/20 rounded-full blur-[100px] animate-pulse">
+            </div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-slg-green/20 rounded-full blur-[100px] animate-pulse"
+                style="animation-delay: 1s;"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid md:grid-cols-2 gap-12 items-center">
+            <div class="text-center md:text-left reveal">
+                <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+                    <span class="text-gradient">Santa's Last Gift</span> <br>
+                    <span
+                        class="text-2xl md:text-3xl text-slg-gold block mt-4 font-sans font-light tracking-widest uppercase">The
+                        Final Treasure</span>
+                </h1>
+                <p
+                    class="text-lg md:text-xl text-gray-300 mb-8 max-w-lg mx-auto md:mx-0 font-light border-l-4 border-slg-green pl-4">
+                    "The mythical gift Santa never gave away... until now."
+                    <br><br>
+                    <span class="text-sm text-gray-400">A community-powered memecoin bringing joy, momentum, and
+                        explosive potential.</span>
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+                    <button
+                        class="px-8 py-4 bg-slg-red hover:bg-red-700 text-white rounded-full font-bold text-lg shadow-[0_0_20px_rgba(212,36,38,0.6)] hover:shadow-[0_0_30px_rgba(212,36,38,0.8)] transition-all transform hover:-translate-y-1">
+                        Buy Now
+                    </button>
+                    <button
+                        class="px-8 py-4 glass hover:bg-white/10 text-white rounded-full font-bold text-lg border border-slg-gold/50 hover:border-slg-gold transition-all">
+                        Chart
+                    </button>
+                </div>
+            </div>
+
+            <div class="relative mt-10 md:mt-0 animate-float reveal">
+                <div
+                    class="relative z-10 rounded-2xl overflow-hidden border-2 border-slg-gold/30 shadow-[0_0_50px_rgba(255,215,0,0.2)]">
+                    <img src="assets/santa1gif.jpg" alt="Santa with Glowing Gift"
+                        class="w-full h-auto transform hover:scale-105 transition-duration-700">
+                </div>
+                <!-- Magical sparkles behind -->
+                <div class="absolute -top-10 -right-10 text-slg-gold/20 text-9xl animate-spin-slow">✧</div>
+                <div class="absolute -bottom-10 -left-10 text-slg-green/20 text-9xl">✦</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass rounded-3xl p-8 md:p-12 reveal border-t border-b border-slg-gold/20">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl md:text-5xl font-bold mb-4 text-slg-gold">What is $SLG?</h2>
+                    <div class="w-24 h-1 bg-slg-red mx-auto rounded-full"></div>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="space-y-6 text-gray-200 leading-relaxed font-light text-lg">
+                        <p>
+                            For centuries, the legend spoke of a final gift—a treasure so powerful that Santa kept it
+                            hidden in the deepest vaults of the North Pole. It wasn't a toy, and it wasn't coal. It was
+                            a catalyst for pure, unadulterated holiday joy and financial momentum.
+                        </p>
+                        <p>
+                            <strong class="text-slg-green">Santa's Last Gift ($SLG)</strong> is now unlocked. It's more
+                            than a coin; it's a movement. Driven by a community that believes in the magic of giving and
+                            the power of HODLing, $SLG is here to light up the blockchain like a Christmas tree.
+                        </p>
+                    </div>
+                    <div class="relative glass rounded-xl p-6 flex items-center justify-center min-h-[300px]">
+                        <!-- Placeholder for visual or meme -->
+                        <div class="text-center">
+                            <h3 class="text-2xl font-bold mb-2">Meme of the Week</h3>
+                            <div
+                                class="w-full h-auto bg-black/30 rounded-lg flex items-center justify-center border border-white/10 my-4 overflow-hidden">
+                                <img src="assets/weekly_Community_meme.jpg" alt="Weekly Community Meme"
+                                    class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                            </div>
+                            <p class="text-sm text-gray-400">Best meme wins $SLG airdrops!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tokenomics -->
+    <section id="tokenomics" class="py-24 bg-black/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Tokenomics</h2>
+                <p class="text-gray-400">The machinery behind the magic.</p>
+            </div>
+
+            <div class="grid sm:grid-cols-3 gap-8 text-center reveal">
+                <div class="glass p-8 rounded-2xl hover:bg-white/5 transition-all group">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform text-slg-gold"><i
+                            class="fa-solid fa-gift"></i></div>
+                    <h3 class="text-2xl font-bold text-slg-gold mb-2">100 Billion</h3>
+                    <p class="text-gray-400">Total Supply</p>
+                </div>
+                <div class="glass p-8 rounded-2xl hover:bg-white/5 transition-all group">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform text-slg-red"><i
+                            class="fa-solid fa-fire"></i></div>
+                    <h3 class="text-2xl font-bold text-slg-red mb-2">Burned</h3>
+                    <p class="text-gray-400">50% Vitalik Buterin's Stocking</p>
+                </div>
+                <div class="glass p-8 rounded-2xl hover:bg-white/5 transition-all group">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform text-slg-green"><i
+                            class="fa-solid fa-handshake"></i></div>
+                    <h3 class="text-2xl font-bold text-slg-green mb-2">0% Tax</h3>
+                    <p class="text-gray-400">Buy & Sell Freely</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Roadmap -->
+    <section id="roadmap" class="py-24 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">The Journey Ahead</h2>
+                <p class="text-slg-gold font-serif italic">"Sleigh bells ring, are you listening?"</p>
+            </div>
+
+            <div class="space-y-12">
+                <!-- Phase 1 -->
+                <div class="flex flex-col md:flex-row gap-8 items-center reveal">
+                    <div class="w-full md:w-1/3 text-right">
+                        <h3 class="text-3xl font-bold text-slg-red">Phase 1</h3>
+                        <p class="text-gray-400 uppercase tracking-widest text-sm">The Awakening</p>
+                    </div>
+                    <div
+                        class="w-1 h-32 md:h-1 bg-gradient-to-b md:bg-gradient-to-r from-transparent via-slg-gold to-transparent opacity-50">
+                    </div>
+                    <div class="w-full md:w-2/3 glass p-6 rounded-xl border-l-4 border-slg-red">
+                        <ul class="space-y-2 text-gray-300">
+                            <li>• Website Launch & Branding</li>
+                            <li>• Community Building (Telegram/Twitter)</li>
+                            <li>• Meme Warfare Begins</li>
+                            <li>• Fair Launch on DEX</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Phase 2 -->
+                <div class="flex flex-col md:flex-row-reverse gap-8 items-center reveal">
+                    <div class="w-full md:w-1/3 text-left">
+                        <h3 class="text-3xl font-bold text-slg-green">Phase 2</h3>
+                        <p class="text-gray-400 uppercase tracking-widest text-sm">The Explosion</p>
+                    </div>
+                    <div
+                        class="w-1 h-32 md:h-1 bg-gradient-to-b md:bg-gradient-to-r from-transparent via-slg-green to-transparent opacity-50">
+                    </div>
+                    <div
+                        class="w-full md:w-2/3 glass p-6 rounded-xl border-r-4 md:border-r-4 md:border-l-0 border-l-4 border-slg-green text-right">
+                        <ul class="space-y-2 text-gray-300">
+                            <li>• CoinGecko & CMC Listing</li>
+                            <li>• 1,000+ Holders</li>
+                            <li>• Strategic Influencer Partnerships</li>
+                            <li>• First Charity Donation (Toys for Tots)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Phase 3 -->
+                <div class="flex flex-col md:flex-row gap-8 items-center reveal">
+                    <div class="w-full md:w-1/3 text-right">
+                        <h3 class="text-3xl font-bold text-slg-gold">Phase 3</h3>
+                        <p class="text-gray-400 uppercase tracking-widest text-sm">The Legend</p>
+                    </div>
+                    <div
+                        class="w-1 h-32 md:h-1 bg-gradient-to-b md:bg-gradient-to-r from-transparent via-slg-gold to-transparent opacity-50">
+                    </div>
+                    <div class="w-full md:w-2/3 glass p-6 rounded-xl border-l-4 border-slg-gold">
+                        <ul class="space-y-2 text-gray-300">
+                            <li>• 10,000+ Holders</li>
+                            <li>• CEX Listings</li>
+                            <li>• Santa's Last Gift NFT Collection</li>
+                            <li>• To The Moon 🚀</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community / Contact -->
+    <section id="community" class="py-24 bg-gradient-to-t from-slg-red/20 to-transparent">
+        <div class="max-w-4xl mx-auto px-4 text-center reveal">
+            <h2 class="text-4xl md:text-6xl font-bold mb-8">Join the $SLG Family</h2>
+            <p class="text-xl text-gray-200 mb-10">
+                Don't miss out on the last gift. The sleigh is leaving soon.
+            </p>
+            <div class="flex flex-wrap justify-center gap-6">
+                <!-- Telegram -->
+                <a href="#"
+                    class="group relative px-8 py-4 bg-[#0088cc] rounded-full overflow-hidden transition-all hover:scale-105 shadow-lg">
+                    <div class="relative z-10 flex items-center gap-2 font-bold text-white">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.694 0M10.151 16.591l-.666-3.235 5.86-5.46c.267-.227-.083-.346-.388-.173L7.545 12.33l-3.134-1.01c-.687-.222-.697-.68.145-1.006l12.264-4.726c.55-.213 1.05.138.868.966l-2.094 9.87c-.156.708-.576.88-1.168.544l-3.227-2.378Z" />
+                        </svg>
+                        Join Telegram
+                    </div>
+                </a>
+                <!-- Twitter -->
+                <a href="#"
+                    class="group relative px-8 py-4 bg-black border border-gray-700 rounded-full overflow-hidden transition-all hover:scale-105 shadow-lg">
+                    <div class="relative z-10 flex items-center gap-2 font-bold text-white">
+                        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                            <path
+                                d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                        </svg>
+                        Follow X
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black/80 py-10 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-4">
+            <div class="text-2xl font-serif font-bold text-slg-gold">$SLG</div>
+            <div class="text-gray-500 text-sm">
+                &copy; 2025 Santa's Last Gift. All rights reserved.
+            </div>
+            <div class="flex gap-4 text-gray-400">
+                <a href="#" class="hover:text-white">Quick Links</a>
+                <a href="#" class="hover:text-white">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>
