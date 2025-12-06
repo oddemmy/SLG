@@ -29,6 +29,7 @@
                         'xl': ['1.25rem', '1.75rem'], /* 20px */
                         '2xl': ['1.5rem', '2rem'],    /* 24px */
                         '3xl': ['1.875rem', '2.25rem'], /* 30px */
+                        '3.5xl': ['2.0625rem', '2.375rem'], /* 33px */
                         '4xl': ['2.25rem', '2.5rem'],   /* 36px */
                         '5xl': ['3rem', '1'],           /* 48px */
                         '6xl': ['3.75rem', '1'],        /* 60px */
@@ -42,7 +43,7 @@
 
 <body class="bg-slg-dark text-white relative">
 
-  
+    <!-- Snowfall -->
     <!-- Snowfall -->
     <div id="snowfall-container" class="fixed inset-0 pointer-events-none z-50 overflow-hidden" aria-hidden="true">
     </div>
@@ -51,9 +52,9 @@
     <nav class="fixed w-full z-50 transition-all duration-300 glass">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-20">
-               <div class="flex-shrink-0 flex items-center gap-2">
-             <!--     <span class="text-3xl font-bold text-slg-gold tracking-wider font-sans">$SLG</span> -->
-                   <span class="text-4xl font-bold font-sans text-slg-gold">$SLG</span>
+                <div class="flex-shrink-0 flex items-center items-baseline">
+                    <span class="text-3.5xl font-serif text-slg-gold font-bold tracking-wider">$</span>
+                    <span class="text-3xl font-serif text-slg-gold font-bold tracking-wider">SLG</span>
                 </div>
                 <div class="hidden md:block">
                     <div class="ml-10 flex items-baseline space-x-8">
@@ -90,14 +91,14 @@
                     class="block hover:text-slg-gold px-3 py-2 rounded-md text-base font-medium">Tokenomics</a>
                 <a href="#roadmap"
                     class="block hover:text-slg-gold px-3 py-2 rounded-md text-base font-medium">Roadmap</a>
-                <a href="https://t.me/+kE9Hh1bkKKVlZmFk" class="block text-slg-red font-bold px-3 py-2 rounded-md text-base">Join
+                <a href="#community" class="block text-slg-red font-bold px-3 py-2 rounded-md text-base">Join
                     Community</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="min-h-screen relative flex items-center justify-center pt-40 overflow-hidden bg-hero">
+    <section id="home" class="min-h-screen relative flex items-center justify-center pt-20 overflow-hidden bg-hero">
         <div class="absolute inset-0 z-0">
             <!-- Background Glows -->
             <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-slg-red/20 rounded-full blur-[100px] animate-pulse">
@@ -185,81 +186,37 @@
         </div>
     </section>
 
-  <!-- Tokenomics Section -->
-    <section id="tokenomics" class="py-20 px-4 bg-slate-800/30">
-        <div class="container mx-auto">
-            <h2 class="text-4xl md:text-5xl font-bold text-center mb-16 text-white">Tokenomics</h2>
-            
-            <div class="max-w-6xl mx-auto">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <!-- Pie Chart -->
-                    <div class="flex justify-center">
-                        <div class="relative w-80 h-80">
-                            <svg viewBox="0 0 100 100" class="transform -rotate-90">
-                                <!-- Public Sale 50% -->
-                                <circle cx="50" cy="50" r="40" fill="none" stroke="#3b82f6" stroke-width="20" 
-                                        stroke-dasharray="126 252" stroke-dashoffset="0"></circle>
-                                <!-- Reserve & Aid Fund 30% -->
-                                <circle cx="50" cy="50" r="40" fill="none" stroke="#10b981" stroke-width="20" 
-                                        stroke-dasharray="75.4 252" stroke-dashoffset="-126"></circle>
-                                <!-- Team & Dev 10% -->
-                                <circle cx="50" cy="50" r="40" fill="none" stroke="#f59e0b" stroke-width="20" 
-                                        stroke-dasharray="25.1 252" stroke-dashoffset="-201.4"></circle>
-                                <!-- Community Incentives 10% -->
-                                <circle cx="50" cy="50" r="40" fill="none" stroke="#ef4444" stroke-width="20" 
-                                        stroke-dasharray="25.1 252" stroke-dashoffset="-226.5"></circle>
-                            </svg>
-                            <div class="absolute inset-0 flex items-center justify-center">
-                                <div class="text-center">
-                                    <div class="text-4xl font-bold text-red-500">$SLG</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Legend -->
-                    <div class="space-y-6">
-                        <div class="flex items-center gap-4">
-                            <div class="w-6 h-6 bg-blue-500 rounded"></div>
-                            <div>
-                                <div class="text-3xl font-bold text-blue-400">50%</div>
-                                <div class="text-gray-300">Public Sale</div>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-6 h-6 bg-green-500 rounded"></div>
-                            <div>
-                                <div class="text-3xl font-bold text-green-400">30%</div>
-                                <div class="text-gray-300">Reserve & Aid Fund</div>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-6 h-6 bg-amber-500 rounded"></div>
-                            <div>
-                                <div class="text-3xl font-bold text-amber-400">10%</div>
-                                <div class="text-gray-300">Team & Dev</div>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-4">
-                            <div class="w-6 h-6 bg-red-500 rounded"></div>
-                            <div>
-                                <div class="text-3xl font-bold text-red-400">10%</div>
-                                <div class="text-gray-300">Community Incentives</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <!-- Tokenomics -->
+    <section id="tokenomics" class="py-24 bg-black/20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Tokenomics</h2>
+                <p class="text-gray-400">The machinery behind the magic.</p>
             </div>
-            <div class="mt-16 text-center space-y-4">
-                <div class="inline-block glass px-8 py-4 rounded-2xl border border-slg-gold/30">
-                    <div class="text-sm text-gray-400 uppercase tracking-widest mb-2">Total Supply</div>
-                    <div class="text-5xl font-bold text-slg-gold">10,000,000,000</div>
-                    <div class="text-xl text-gray-300 mt-2">$SLG Tokens</div>
+
+            <div class="grid sm:grid-cols-3 gap-8 text-center reveal">
+                <div class="glass p-8 rounded-2xl hover:bg-white/5 transition-all group">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform text-slg-gold"><i
+                            class="fa-solid fa-gift"></i></div>
+                    <h3 class="text-2xl font-bold text-slg-gold mb-2">100 Billion</h3>
+                    <p class="text-gray-400">Total Supply</p>
                 </div>
-                <p class="text-xl text-gray-300 font-semibold mt-6">Pure and simple - no tricks, just Christmas magic! 🎄</p>
+                <div class="glass p-8 rounded-2xl hover:bg-white/5 transition-all group">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform text-slg-red"><i
+                            class="fa-solid fa-fire"></i></div>
+                    <h3 class="text-2xl font-bold text-slg-red mb-2">Burned</h3>
+                    <p class="text-gray-400">50% Vitalik Buterin's Stocking</p>
+                </div>
+                <div class="glass p-8 rounded-2xl hover:bg-white/5 transition-all group">
+                    <div class="text-5xl mb-4 group-hover:scale-110 transition-transform text-slg-green"><i
+                            class="fa-solid fa-handshake"></i></div>
+                    <h3 class="text-2xl font-bold text-slg-green mb-2">0% Tax</h3>
+                    <p class="text-gray-400">Buy & Sell Freely</p>
+                </div>
             </div>
         </div>
     </section>
+
     <!-- Roadmap -->
     <section id="roadmap" class="py-24 relative overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -339,7 +296,7 @@
             </p>
             <div class="flex flex-wrap justify-center gap-6">
                 <!-- Telegram -->
-                <a href="https://t.me/+kE9Hh1bkKKVlZmFk"
+                <a href="#"
                     class="group relative px-8 py-4 bg-[#0088cc] rounded-full overflow-hidden transition-all hover:scale-105 shadow-lg">
                     <div class="relative z-10 flex items-center gap-2 font-bold text-white">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -350,7 +307,7 @@
                     </div>
                 </a>
                 <!-- Twitter -->
-                <a href="https://x.com/Santagiftsol_"
+                <a href="#"
                     class="group relative px-8 py-4 bg-black border border-gray-700 rounded-full overflow-hidden transition-all hover:scale-105 shadow-lg">
                     <div class="relative z-10 flex items-center gap-2 font-bold text-white">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
@@ -371,24 +328,14 @@
             <div class="text-gray-500 text-sm">
                 &copy; 2025 Santa's Last Gift. All rights reserved.
             </div>
-        <!--    <div class="flex gap-4 text-gray-400">
+            <div class="flex gap-4 text-gray-400">
                 <a href="#" class="hover:text-white">Quick Links</a>
                 <a href="#" class="hover:text-white">Contact</a>
-            </div> -->
+            </div>
         </div>
     </footer>
 
     <script src="js/app.js"></script>
 </body>
 
-
 </html>
-
-
-
-
-
-
-
-
-
